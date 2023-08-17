@@ -36,6 +36,22 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "flask-wtf"
+version = "1.1.1"
+description = "Form rendering, validation, and CSRF protection for Flask with WTForms."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+Flask = "*"
+itsdangerous = "*"
+WTForms = "*"
+
+[package.extras]
+email = ["email-validator"]
+
+[[package]]
 name = "itsdangerous"
 version = "2.1.2"
 description = "Safely pass data to untrusted environments and back."
@@ -79,16 +95,32 @@ MarkupSafe = ">=2.1.1"
 [package.extras]
 watchdog = ["watchdog"]
 
+[[package]]
+name = "wtforms"
+version = "3.0.1"
+description = "Form validation and rendering for Python web development."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+MarkupSafe = "*"
+
+[package.extras]
+email = ["email-validator"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "4ec830fde7565c97a74addeb898f32e22d75ad22cac40f7fcf7f059782583bb5"
+content-hash = "37c1ca31a093a7a2896989cb3a3338cf9356ab23f7c032b71cbdcf0693a3d97f"
 
 [metadata.files]
 click = []
 colorama = []
 flask = []
+flask-wtf = []
 itsdangerous = []
 jinja2 = []
 markupsafe = []
 werkzeug = []
+wtforms = []

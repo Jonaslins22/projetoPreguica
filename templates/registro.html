@@ -44,6 +44,16 @@
                 </div>
                     <button class="btn-login" onclick="exibirMensagem()">Cadastrar</button>
                 </form>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                  {% if messages %}
+                    <ul class=flashes>
+                    {% for category, message in messages %}
+                      <li class="{{ category }}" style='color:#ff0000'>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endwith %}
+                
             </div>
         </div>
     </div>
