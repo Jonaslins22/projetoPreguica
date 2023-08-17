@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash, ses
 #from autenticacao.routes import autenticacao_bp
 
 dados = {}
-
+#kkkkk
 
 class Usuario:
 
