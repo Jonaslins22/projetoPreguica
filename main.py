@@ -1,14 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
-#from autenticacao.routes import autenticacao_bp
+
 
 dados = {}
-#kkkkk
+
 
 class Usuario:
 
-  def __init__(self, usuario, senha):
+  def __init__(self, usuario, senha,cpf):
     self.usuario = usuario
     self.senha = senha
+    self.cpf = cpf
 
 
 app = Flask(__name__)
@@ -95,4 +96,5 @@ def anuncio():
 
 
 if __name__ == '__main__':
-  app.run(debug=True, host='0.0.0.0', port=81)
+  app.run(debug=True, )
+
